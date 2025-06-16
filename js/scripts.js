@@ -38,3 +38,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+const logo = document.getElementById('logo-brand');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 100) { // puedes ajustar el número según cuándo se muestre tu navbar
+        logo.classList.add('visible');
+    } else {
+        logo.classList.remove('visible');
+    }
+});
